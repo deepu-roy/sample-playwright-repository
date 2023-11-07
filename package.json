@@ -1,0 +1,22 @@
+{
+  "name": "sample-playwright-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepu-roy/sample-playwright-repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepu-roy/sample-playwright-repository/issues"
+  },
+  "homepage": "https://github.com/deepu-roy/sample-playwright-repository#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.10"
+  }
+}
