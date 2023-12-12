@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test --headed --timeout=60000",
+    "debug": "npx playwright test --debug --headed --timeout=60000",
+    "report": "npx playwright show-report"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deepu-roy/sample-playwright-repository.git"
@@ -16,7 +20,9 @@
   },
   "homepage": "https://github.com/deepu-roy/sample-playwright-repository#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
     "@playwright/test": "^1.39.0",
-    "@types/node": "^20.8.10"
+    "@types/node": "^20.8.10",
+    "faker": "^6.6.6"
   }
 }
