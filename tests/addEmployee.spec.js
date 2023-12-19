@@ -19,15 +19,21 @@ test.beforeEach(async ({ page }) => {
   await page.goto("https://opensource-demo.orangehrmlive.com/");
 });
 
-test.only("Add employee test", async ({ page }) => {
+test("Add employee test", async ({ page }) => {
+  await test.step("Login", async () => {
     await new LoginPage(page).login("Admin", "admin123");
     await new DashboardPage(page).verifyOnDashboardPage();
-    await new DashboardPage(page).navigateToModule("PIM"); 
-    await new PimLandingPage(page).verifyOnPimLandingPage();   
+  });
+  await test.step("Navigate to PIM module", async () => {
+    await new DashboardPage(page).navigateToModule("PIM");
+    await new PimLandingPage(page).verifyOnPimLandingPage();
     await new PimLandingPage(page).verifyOnPage("Employee List");
     await new EmployeeListPage(page).verifyOnPage("Employee List");
+  });
+  await test.step("Add employee", async () => {
     await new EmployeeListPage(page).navigateToAddEmployee();
     await new AddEmployeePage(page).verifyOnPage("Add Employee");
     await new AddEmployeePage(page).addEmployee(employee);
     await new EmployeeListPage(page).verifyOnPage("Employee List");
+  });
 });
