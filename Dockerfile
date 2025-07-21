@@ -1,15 +1,14 @@
-FROM node:20-alpine
+FROM node:20
 
 WORKDIR /app
 
 COPY package.json .
 
-RUN npm install && \
-    apk add --no-cache chromium firefox-esr && \
-    npx playwright install --with-deps chromium firefox webkit
+RUN npm install
+RUN npx playwright install --with-deps chromium
 
 COPY . .
 
 EXPOSE 9323
 
-ENTRYPOINT [ "npm","run", "test" ]
+CMD [ "npm","run", "test-and-serve" ]

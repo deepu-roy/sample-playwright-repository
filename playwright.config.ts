@@ -6,7 +6,7 @@ export default defineConfig({
     forbidOnly: !!process.env.CI,
     workers: process.env.CI ? 1 : undefined,
     outputDir: "test-results/",
-    reporter: "html",
+    reporter: [["html", { outputFolder: "playwright-report" }]],
     globalTimeout: 600000,
 
     use: {
