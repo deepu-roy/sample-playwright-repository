@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "outDir": "./dist",
+        "rootDir": "./",
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "allowImportingTsExtensions": false,
+        "noEmit": true,
+        "types": ["node", "@playwright/test"]
+    },
+    "include": ["**/*.ts", "**/*.js"],
+    "exclude": ["node_modules", "dist", "test-results", "playwright-report"]
+}

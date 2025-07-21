@@ -1,28 +1,40 @@
 {
-  "name": "sample-playwright-repository",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx playwright test --headed --timeout=60000",
-    "debug": "npx playwright test --debug --headed --timeout=60000",
-    "report": "npx playwright show-report"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/deepu-roy/sample-playwright-repository.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/deepu-roy/sample-playwright-repository/issues"
-  },
-  "homepage": "https://github.com/deepu-roy/sample-playwright-repository#readme",
-  "devDependencies": {
-    "@faker-js/faker": "^8.3.1",
-    "@playwright/test": "^1.53.0",
-    "@types/node": "^20.8.10",
-    "faker": "^6.6.6"
-  }
+    "name": "sample-playwright-repository",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "test": "npx playwright test",
+        "debug": "npx playwright test --debug --headed",
+        "report": "npx playwright show-report",
+        "type-check": "tsc --noEmit",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "check:all": "npm run type-check && npm run lint && npm run format:check"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/deepu-roy/sample-playwright-repository.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/deepu-roy/sample-playwright-repository/issues"
+    },
+    "homepage": "https://github.com/deepu-roy/sample-playwright-repository#readme",
+    "devDependencies": {
+        "@faker-js/faker": "^8.3.1",
+        "@playwright/test": "^1.54.1",
+        "@types/node": "^20.8.10",
+        "@typescript-eslint/eslint-plugin": "^8.37.0",
+        "@typescript-eslint/parser": "^8.37.0",
+        "eslint": "^9.31.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-playwright": "^2.2.0",
+        "eslint-plugin-prettier": "^5.5.3",
+        "faker": "^6.6.6",
+        "prettier": "^3.6.2",
+        "typescript": "^5.8.3"
+    }
 }

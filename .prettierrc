@@ -1,0 +1,15 @@
+{
+    "printWidth": 160,
+    "tabWidth": 4,
+    "arrowParens": "avoid",
+    "endOfLine": "auto",
+    "trailingComma": "none",
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": {
+                "printWidth": 180
+            }
+        }
+    ]
+}
