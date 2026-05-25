@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "name": "sample-playwright-repository",
     "version": "1.0.0",
     "description": "",
@@ -8,6 +9,8 @@
         "test-and-serve": "npx playwright test && npx playwright show-report --host 0.0.0.0 --port 9323",
         "debug": "npx playwright test --debug --headed",
         "report": "npx playwright show-report --host 0.0.0.0 --port 9323",
+        "lint": "eslint . --ext .ts,.tsx",
+        "lint:fix": "eslint . --ext .ts,.tsx --fix",
         "type-check": "tsc --noEmit",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
@@ -26,15 +29,17 @@
     "homepage": "https://github.com/deepu-roy/sample-playwright-repository#readme",
     "devDependencies": {
         "@faker-js/faker": "^8.3.1",
-        "@playwright/test": "1.55.0",
+        "@playwright/test": "1.58.0",
         "@types/node": "^20.8.10",
         "@typescript-eslint/eslint-plugin": "^8.37.0",
         "@typescript-eslint/parser": "^8.37.0",
+        "dotenv": "^17.4.2",
         "eslint": "^9.31.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-playwright": "^2.2.0",
         "eslint-plugin-prettier": "^5.5.3",
-        "faker": "^6.6.6",
+        "faker": "^5.5.3",
+        "globals": "^17.6.0",
         "prettier": "^3.6.2",
         "typescript": "^5.8.3"
     }

@@ -11,14 +11,13 @@ const employee: Employee = {
     password: "Password123"
 };
 
-test.beforeEach(async ({ page }) => {
-    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", { timeout: 60000 });
-});
-
-test("Add employee test", async ({ loginPage, dashboardPage, pimLandingPage, employeeListPage, addEmployeePage }) => {
+test.beforeEach(async ({ loginPage }) => {
     await test.step("Login", async () => {
         await loginPage.login("Admin", "admin123");
     });
+});
+
+test("Add employee test", async ({ dashboardPage, pimLandingPage, employeeListPage, addEmployeePage }) => {
     await test.step("Navigate to PIM module", async () => {
         await dashboardPage.navigateToModule("PIM");
         await pimLandingPage.verifyOnPimLandingPage();

@@ -10,11 +10,13 @@ export default defineConfig({
     globalTimeout: 600000,
     timeout: 60000,
     expect: { timeout: 5000 },
-
     use: {
-        trace: "on",
+        baseURL: "https://opensource-demo.orangehrmlive.com",
         headless: false,
-        viewport: { width: 1280, height: 720 }
+        viewport: { width: 1280, height: 720 },
+        screenshot: "only-on-failure",
+        trace: "off",
+        ignoreHTTPSErrors: true
     },
     projects: [
         {
