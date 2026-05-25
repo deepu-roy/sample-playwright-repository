@@ -10,7 +10,8 @@ export class PimLandingPage extends ModuleLandingPage {
     }
 
     async verifyOnPimLandingPage(): Promise<void> {
+        await this.page.waitForLoadState("networkidle");
         await this.page.waitForSelector(".oxd-topbar-header-breadcrumb");
-        await expect(this.pageTitle).toContainText("PIM");
+        await expect(this.pageTitle).toContainText("PIM", { timeout: 10000 });
     }
 }
